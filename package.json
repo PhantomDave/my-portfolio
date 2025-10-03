@@ -1,5 +1,5 @@
 {
-  "name": "untitled",
+  "name": "davesportfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.14",
+    "tailwindcss": "^4.1.14",
     "vue": "^3.5.22"
   },
   "devDependencies": {

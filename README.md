@@ -1,5 +1,32 @@
-# Vue 3 + TypeScript + Vite
+# Davide Rodo — Portfolio
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Personal site built with [Vue 3](https://vuejs.org/), [TypeScript](https://www.typescriptlang.org/), [Vite](https://vite.dev/), and the experimental [Tailwind CSS v4](https://tailwindcss.com/blog/tailwindcss-v4-alpha). It mirrors the structure of boutique studio portfolios, focusing on crisp storytelling, services, and measurable impact.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Local development
+
+```fish
+npm install
+npm run dev
+```
+
+## Production build
+
+```fish
+npm run build
+```
+
+## Architecture
+
+- `src/style.css` — global theme (fonts, background gradients, utility helpers)
+- `src/App.vue` — data-driven layout wiring the page sections
+- `src/components` — modular sections for hero, services, experience, projects, and contact CTA
+
+## Customisation
+
+- Update navigation labels, social links, and project data inside `src/App.vue`
+- Replace placeholder imagery in `HeroSection.vue` and project cards with real assets or media embeds
+- Point CTA links to your actual resume, calendar, and live case studies
+
+## License
+
+MIT — use, remix, and ship.
