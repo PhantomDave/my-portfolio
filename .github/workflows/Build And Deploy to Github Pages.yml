@@ -31,10 +31,11 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          cname: "pdave.dev"
+          # cname: "pdave.dev"
           commit_message: "Deploying to GitHub Pages"
           user_email: "davide.rodo@pdave.dev"
           user_name: "Dave"
