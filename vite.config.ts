@@ -7,4 +7,5 @@ export default defineConfig({
   server: {
     allowedHosts: [".pdave.dev", "localhost", ".github.io"],
   },
+  base: "my-portfolio",
 });
