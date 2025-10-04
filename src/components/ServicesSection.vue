@@ -1,5 +1,5 @@
 <script setup lang="ts">
-type Service = {
+export type Service = {
   title: string
   description: string
   bullets: string[]

@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import SiteHeader from "./components/SiteHeader.vue";
 import HeroSection from "./components/HeroSection.vue";
-import ServicesSection from "./components/ServicesSection.vue";
-import ExperienceSection from "./components/ExperienceSection.vue";
-import EducationSection from "./components/EducationSection.vue";
+import ServicesSection, { type Service } from "./components/ServicesSection.vue";
+import ExperienceSection, { type ExperienceEntry } from "./components/ExperienceSection.vue";
+// import EducationSection from "./components/EducationSection.vue";
 import ProjectsSection, { type Project } from "./components/ProjectsSection.vue";
 import ContactSection from "./components/ContactSection.vue";
 import SiteFooter from "./components/SiteFooter.vue";
@@ -18,28 +18,14 @@ type SocialLink = {
   href: string;
 };
 
-type Service = {
-  title: string;
-  description: string;
-  bullets: string[];
-};
-
-type ExperienceEntry = {
-  company: string;
-  role: string;
-  period: string;
-  summary: string;
-  highlights: string[];
-};
-
-type EducationEntry = {
-  institution: string;
-  credential: string;
-  period: string;
-  location: string;
-  summary: string;
-  highlights: string[];
-};
+// type EducationEntry = {
+//   institution: string;
+//   credential: string;
+//   period: string;
+//   location: string;
+//   summary: string;
+//   highlights: string[];
+// };
 
 const navigation: NavigationItem[] = [
   { label: "About", href: "#about" },
@@ -126,23 +112,23 @@ const experience: ExperienceEntry[] = [
   },
 ];
 
-const education: EducationEntry[] = [
-  {
-    institution: "IPSSEOA Istituto Alberghiero Karol Wojtyla Catania",
-    credential:
-      "Diploma Istituto Tecnico e Professionale · Servizio di ristorazione, cameriere/cameriera e responsabile di sala",
-    period: "2012 – 2017",
-    location: "Catania, Italy",
-    summary:
-      "Five-year program focused on hospitality operations, people management, and customer experience.",
-    highlights: [
-      "Leadership training in front-of-house team coordination and service standards",
-      "Hands-on coursework in menu design, event planning, and guest satisfaction metrics",
-      "Graduated with a final grade of 70/100",
-      "Contributed to school-led hospitality showcases and community events",
-    ],
-  },
-];
+// const education: EducationEntry[] = [
+//   {
+//     institution: "IPSSEOA Istituto Alberghiero Karol Wojtyla Catania",
+//     credential:
+//       "Diploma Istituto Tecnico e Professionale · Servizio di ristorazione, cameriere/cameriera e responsabile di sala",
+//     period: "2012 – 2017",
+//     location: "Catania, Italy",
+//     summary:
+//       "Five-year program focused on hospitality operations, people management, and customer experience.",
+//     highlights: [
+//       "Leadership training in front-of-house team coordination and service standards",
+//       "Hands-on coursework in menu design, event planning, and guest satisfaction metrics",
+//       "Graduated with a final grade of 70/100",
+//       "Contributed to school-led hospitality showcases and community events",
+//     ],
+//   },
+// ];
 
 const projects: Project[] = [
   {

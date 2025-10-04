@@ -1,5 +1,5 @@
 <script setup lang="ts">
-type ExperienceEntry = {
+export type ExperienceEntry = {
   company: string
   role: string
   period: string
