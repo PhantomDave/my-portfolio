@@ -12,21 +12,10 @@
       </div>
       <div class="flex flex-col gap-4 text-sm text-slate-300">
         <a
-          href="mailto:hello@pdave.dev"
+          href="mailto:davide.rodo@pdave.dev"
           class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-slate-950 shadow-lg shadow-cyan-500/30 transition hover:-translate-y-0.5"
         >
-          Email hello@pdave.dev
-        </a>
-        <a
-          href="https://cal.com/"
-          target="_blank"
-          rel="noreferrer"
-          class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 font-semibold text-cyan-100 transition hover:border-white/40 hover:bg-white/10"
-        >
-          Schedule a discovery call
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="h-4 w-4">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14m0 0-6 6m6-6-6-6" />
-          </svg>
+          Email davide.rodo@pdave.dev
         </a>
       </div>
     </div>

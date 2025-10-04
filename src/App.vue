@@ -1,135 +1,190 @@
 <script setup lang="ts">
-import SiteHeader from './components/SiteHeader.vue'
-import HeroSection from './components/HeroSection.vue'
-import ServicesSection from './components/ServicesSection.vue'
-import ExperienceSection from './components/ExperienceSection.vue'
-import ProjectsSection from './components/ProjectsSection.vue'
-import ContactSection from './components/ContactSection.vue'
-import SiteFooter from './components/SiteFooter.vue'
+import SiteHeader from "./components/SiteHeader.vue";
+import HeroSection from "./components/HeroSection.vue";
+import ServicesSection from "./components/ServicesSection.vue";
+import ExperienceSection from "./components/ExperienceSection.vue";
+import EducationSection from "./components/EducationSection.vue";
+import ProjectsSection, { type Project } from "./components/ProjectsSection.vue";
+import ContactSection from "./components/ContactSection.vue";
+import SiteFooter from "./components/SiteFooter.vue";
 
 type NavigationItem = {
-  label: string
-  href: string
-}
+  label: string;
+  href: string;
+};
 
 type SocialLink = {
-  label: string
-  href: string
-}
+  label: string;
+  href: string;
+};
 
 type Service = {
-  title: string
-  description: string
-  bullets: string[]
-}
+  title: string;
+  description: string;
+  bullets: string[];
+};
 
 type ExperienceEntry = {
-  company: string
-  role: string
-  period: string
-  summary: string
-  highlights: string[]
-}
+  company: string;
+  role: string;
+  period: string;
+  summary: string;
+  highlights: string[];
+};
 
-type Project = {
-  name: string
-  description: string
-  stack: string[]
-  linkLabel: string
-  linkHref: string
-  accent: string
-}
+type EducationEntry = {
+  institution: string;
+  credential: string;
+  period: string;
+  location: string;
+  summary: string;
+  highlights: string[];
+};
 
 const navigation: NavigationItem[] = [
-  { label: 'About', href: '#about' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Work', href: '#work' },
-  { label: 'Contact', href: '#contact' },
-]
+  { label: "About", href: "#about" },
+  { label: "Experience", href: "#experience" },
+  // { label: "Education", href: "#education" },
+  { label: "Work", href: "#work" },
+  { label: "Contact", href: "#contact" },
+];
 
 const socials: SocialLink[] = [
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/' },
-  { label: 'GitHub', href: 'https://github.com/PhantomDave' },
-  { label: 'X (Twitter)', href: 'https://x.com/' },
-]
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/davide-rodo-23829419b/" },
+  { label: "GitHub", href: "https://github.com/PhantomDave" },
+];
 
 const services: Service[] = [
   {
-    title: 'Product-Focused Engineering',
-    description: 'From idea validation to polished releases, I ship experiences users actually love.',
-    bullets: ['Lean product discovery workshops', 'Incremental delivery with measurable outcomes', 'Embedded analytics and A/B experimentation'],
+    title: "Full-Stack Development",
+    description:
+      "From database design to pixel-perfect UIs, I build complete solutions that scale across the entire stack.",
+    bullets: [
+      "RESTful APIs and database architecture",
+      "Modern frontend frameworks (Vue, Angular, React)",
+      "Cloud deployment and DevOps automation",
+    ],
   },
   {
-    title: 'Frontend Architecture',
-    description: 'I craft resilient, fast Vue stacks that scale with your roadmap instead of fighting it.',
-    bullets: ['Design system foundations & tokens', 'SSR / SSG pipelines and CI tooling', 'Accessibility-first implementation'],
+    title: "Backend Engineering",
+    description:
+      "I architect robust server-side systems using C#, .NET, PHP, and Python to power modern applications.",
+    bullets: [
+      "Microservices and distributed system design",
+      "Database optimization and performance tuning",
+      "API design and integration patterns",
+    ],
   },
   {
-    title: 'Team Enablement',
-    description: 'I grow teams through mentorship, solid docs, and guardrails that free engineers to move quickly.',
-    bullets: ['Onboarding playbooks & pair programming', 'Automated quality gates and DX tooling', 'Knowledge sharing talks & workshops'],
+    title: "Team Leadership & Mentorship",
+    description:
+      "I guide development teams through complex technical challenges while fostering a collaborative engineering culture.",
+    bullets: [
+      "Code review and architecture guidance",
+      "Agile methodologies and project coordination",
+      "Junior developer mentorship and onboarding",
+    ],
   },
-]
+];
 
 const experience: ExperienceEntry[] = [
   {
-    company: 'Northwind Labs',
-    role: 'Lead Frontend Engineer',
-    period: '2022 — Present',
-    summary: 'Scaled a design system across five product lines while reducing build times by 45%.',
-    highlights: ['Directed a squad of 6 engineers and 2 designers', 'Introduced visual regression testing and release automation', 'Championed accessibility audits achieving WCAG 2.1 AA compliance'],
+    company: "BaxEnergy",
+    role: "Software Engineer",
+    period: "Jan 2025 – Present · 10 mos",
+    summary:
+      "Supporting BaxEnergy’s energy platform from Acireale (Hybrid), pairing with senior engineers to deliver .NET features and web enhancements.",
+    highlights: [
+      "Prototype and ship .NET features across core web engineering initiatives",
+      "Shadow senior teammates to harden delivery pipelines and review production code",
+      "Assist with customer-facing demos and documentation for new energy modules",
+    ],
   },
   {
-    company: 'Atlas Analytics',
-    role: 'Senior Software Engineer',
-    period: '2019 — 2022',
-    summary: 'Modernized the customer intelligence platform with real-time dashboards consumed by 30k+ analysts.',
-    highlights: ['Rolled out a modular micro-frontend architecture', 'Cut onboarding time from weeks to days with starter kits', 'Partnered with PMs to launch usage-based pricing experiments'],
+    company: "BaxEnergy",
+    role: "Software Developer",
+    period: "Jan 2024 – Dec 2024 · 1 yr",
+    summary:
+      "Delivered C# and PHP solutions for BaxEnergy clients, balancing feature work with platform modernization efforts.",
+    highlights: [
+      "Implemented .NET services and integrations that underpin energy analytics workloads",
+      "Maintained and refactored PHP components while trimming legacy technical debt",
+      "Coordinated with designers and PMs to launch monitoring dashboards to production",
+    ],
   },
   {
-    company: 'Freelance',
-    role: 'Full-Stack Consultant',
-    period: '2016 — 2019',
-    summary: 'Helped early-stage startups validate ideas, land funding, and build their first engineering muscle.',
-    highlights: ['Delivered MVPs for 12 funded startups', 'Implemented CI/CD pipelines from scratch', 'Coached founders on technical hiring and roadmapping'],
+    company: "Voxel Entertainment APS",
+    role: "Software Engineer · Part-time",
+    period: "Jan 2020 – Jun 2023 · 3 yrs 6 mos",
+    summary:
+      "Remote contributor ensuring the studio’s Linux infrastructure and backend tooling stayed resilient for the game teams.",
+    highlights: [
+      "Managed and maintained Linux virtual machines powering production services",
+      "Led and coordinated a distributed C# development team to deliver features on schedule",
+      "Built deployment tooling that reduced release incidents and improved observability",
+    ],
   },
-]
+];
+
+const education: EducationEntry[] = [
+  {
+    institution: "IPSSEOA Istituto Alberghiero Karol Wojtyla Catania",
+    credential:
+      "Diploma Istituto Tecnico e Professionale · Servizio di ristorazione, cameriere/cameriera e responsabile di sala",
+    period: "2012 – 2017",
+    location: "Catania, Italy",
+    summary:
+      "Five-year program focused on hospitality operations, people management, and customer experience.",
+    highlights: [
+      "Leadership training in front-of-house team coordination and service standards",
+      "Hands-on coursework in menu design, event planning, and guest satisfaction metrics",
+      "Graduated with a final grade of 70/100",
+      "Contributed to school-led hospitality showcases and community events",
+    ],
+  },
+];
 
 const projects: Project[] = [
   {
-    name: 'Pulseboard',
-    description: 'A mission-critical ops dashboard with adaptive theming, live metrics, and granular permissions.',
-    stack: ['Vue 3', 'TypeScript', 'Vite', 'WebSockets'],
-    linkLabel: 'View case study',
-    linkHref: '#',
-    accent: 'from-sky-400 via-cyan-500 to-emerald-400',
+    name: "South Valley Roleplay",
+    description:
+      "A Grand Theft Auto V roleplay server launched on a new platform; I engineered the gamemode end to end in C#, shaped backend systems, and mentored contributors.",
+    stack: [
+      "C#",
+      "SQL",
+      "OOP",
+      "Game Scripting",
+      "Team Coordination",
+      "Rest APIs",
+      "SysAdmin",
+      "Docker",
+      "CI/CD",
+      "Agile Methodologies",
+    ],
+    accent: "from-sky-400 via-cyan-500 to-emerald-400",
   },
   {
-    name: 'Forma UI',
-    description: 'A component library powering complex forms, featuring auto-generated docs and accessibility baked in.',
-    stack: ['Storybook', 'VueUse', 'Radix primitives'],
-    linkLabel: 'Explore components',
-    linkHref: '#',
-    accent: 'from-violet-400 via-purple-500 to-fuchsia-400',
+    name: "Money Tracker",
+    description:
+      "Lightweight finance companion built with a Python backend and Angular UI to keep daily expenses in check while traveling.",
+    stack: ["Python", "Angular", "REST APIs"],
+    linkLabel: "View project",
+    linkHref: "https://github.com/PhantomDave/wheremoney",
+    accent: "from-amber-400 via-orange-500 to-rose-400",
   },
-  {
-    name: 'Trailhead',
-    description: 'A content platform for outdoor guides with long-form writing, geo search, and offline syncing.',
-    stack: ['Nuxt', 'GraphQL', 'PostgreSQL', 'Cloudflare Workers'],
-    linkLabel: 'See live product',
-    linkHref: '#',
-    accent: 'from-amber-400 via-orange-500 to-rose-400',
-  },
-]
+];
 </script>
 
 <template>
   <div id="top" class="min-h-screen bg-slate-950 text-slate-100">
     <SiteHeader :navigation="navigation" />
-    <main class="mx-auto flex max-w-6xl flex-col gap-28 px-6 pb-32 pt-32 sm:px-8 lg:px-12">
+    <main
+      class="mx-auto flex max-w-6xl flex-col gap-28 px-6 pb-32 pt-32 sm:px-8 lg:px-12"
+    >
       <HeroSection id="about" :socials="socials" />
       <ServicesSection :services="services" />
       <ExperienceSection id="experience" :experience="experience" />
+      <!-- <EducationSection id="education" :education="education" /> -->
       <ProjectsSection id="work" :projects="projects" />
       <ContactSection id="contact" />
     </main>

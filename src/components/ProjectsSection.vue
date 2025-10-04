@@ -1,10 +1,10 @@
 <script setup lang="ts">
-type Project = {
+export type Project = {
   name: string
   description: string
   stack: string[]
-  linkLabel: string
-  linkHref: string
+  linkLabel?: string
+  linkHref?: string
   accent: string
 }
 
@@ -33,7 +33,6 @@ defineProps<{ projects: Project[] }>()
           <div :class="['absolute inset-0 bg-gradient-to-r', project.accent]" />
           <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.35),_transparent_60%)] opacity-50" />
           <div class="absolute bottom-4 left-4 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.2em] text-slate-950">
-            <span class="rounded-full bg-white/80 px-3 py-1">Case Study</span>
             <span class="rounded-full bg-white/60 px-3 py-1">{{ project.stack[0] }}</span>
           </div>
         </div>
@@ -51,7 +50,7 @@ defineProps<{ projects: Project[] }>()
               {{ tech }}
             </li>
           </ul>
-          <div class="mt-auto">
+          <div v-if="project.linkLabel && project.linkHref" class="mt-auto">
             <a
               :href="project.linkHref"
               class="inline-flex items-center gap-2 text-sm font-medium text-cyan-200 transition hover:text-white"

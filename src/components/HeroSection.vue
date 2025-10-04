@@ -12,16 +12,16 @@ defineProps<{ socials: SocialLink[] }>()
     <div class="space-y-10">
       <div class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.2em] text-cyan-200">
         <span class="h-2 w-2 rounded-full bg-cyan-400" />
-        Open for senior front-end leadership roles
+        Open for full-stack developer opportunities
       </div>
 
       <div class="space-y-6">
         <h1 class="text-balance text-4xl font-semibold tracking-tight text-slate-50 sm:text-5xl md:text-6xl">
-          I design and build products that feel effortless—even when the systems underneath are anything but.
+          I build full-stack solutions that scale—from robust backends to polished interfaces.
         </h1>
         <p class="text-pretty text-lg text-slate-300 sm:text-xl">
-          I’m Dave, a developer obsessed with crafted interfaces, sustainable architecture, and teams that ship with confidence. I partner with founders and product orgs to translate bold ideas into resilient, measurable software.
-        </p>
+          I'm Davide, a full-stack engineer specializing in C#, .NET, and modern web frameworks. I build resilient systems and mentor teams to deliver quality software with confidence.
+         </p>
       </div>
 
       <div class="flex flex-wrap gap-4">
@@ -44,16 +44,16 @@ defineProps<{ socials: SocialLink[] }>()
 
       <ul class="grid gap-6 sm:grid-cols-3">
         <li class="rounded-2xl border border-white/10 bg-white/5 px-5 py-6">
-          <p class="text-3xl font-semibold text-slate-50">12+</p>
-          <p class="mt-1 text-sm text-slate-400">Years shipping digital products</p>
+          <p class="text-3xl font-semibold text-slate-50">5+</p>
+          <p class="mt-1 text-sm text-slate-400">Years of professional development experience</p>
         </li>
         <li class="rounded-2xl border border-white/10 bg-white/5 px-5 py-6">
-          <p class="text-3xl font-semibold text-slate-50">45%</p>
-          <p class="mt-1 text-sm text-slate-400">Average performance gains per engagement</p>
+          <p class="text-3xl font-semibold text-slate-50">Full-Stack</p>
+          <p class="mt-1 text-sm text-slate-400">C#, .NET, PHP, Python & Modern Frontend</p>
         </li>
         <li class="rounded-2xl border border-white/10 bg-white/5 px-5 py-6">
-          <p class="text-3xl font-semibold text-slate-50">30k+</p>
-          <p class="mt-1 text-sm text-slate-400">Users supported across platforms</p>
+          <p class="text-3xl font-semibold text-slate-50">Remote</p>
+          <p class="mt-1 text-sm text-slate-400">Proven track record in distributed teams</p>
         </li>
       </ul>
 
@@ -79,19 +79,19 @@ defineProps<{ socials: SocialLink[] }>()
           <div class="absolute -top-6 left-1/2 h-24 w-24 -translate-x-1/2 rounded-2xl bg-gradient-to-br from-cyan-400 via-sky-500 to-emerald-400 opacity-90 blur-2xl transition group-hover:opacity-100" />
           <div class="relative mx-auto mb-6 h-28 w-28 rounded-2xl border border-white/20 bg-gradient-to-br from-slate-700 via-slate-800 to-slate-900 shadow-lg" />
           <h2 class="relative text-lg font-semibold text-slate-50">Davide Rodo</h2>
-          <p class="relative mt-2 text-sm text-slate-400">Senior Front-End Engineer & UX Partner</p>
+          <p class="relative mt-2 text-sm text-slate-400">Full-Stack Engineer</p>
           <div class="relative mt-6 space-y-3 text-left text-xs text-slate-400">
             <div class="flex items-center gap-3">
               <span class="h-2 w-2 rounded-full bg-emerald-400" />
-              Leading multidisciplinary squads
+              Backend systems & APIs
             </div>
             <div class="flex items-center gap-3">
               <span class="h-2 w-2 rounded-full bg-sky-400" />
-              Mentoring engineers & designers
+              Modern web frameworks
             </div>
             <div class="flex items-center gap-3">
               <span class="h-2 w-2 rounded-full bg-indigo-400" />
-              Building measurable product outcomes
+              Team collaboration & mentoring
             </div>
           </div>
         </div>

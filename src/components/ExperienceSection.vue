@@ -27,7 +27,7 @@ defineProps<{ experience: ExperienceEntry[] }>()
       <div class="space-y-10">
         <article
           v-for="item in experience"
-          :key="item.company"
+          :key="`${item.company}-${item.role}`"
           class="relative rounded-3xl border border-white/10 bg-white/5 p-6 md:ml-12 md:pl-16"
         >
           <div class="absolute left-0 top-7 hidden h-3 w-3 -translate-x-1/2 rounded-full border border-white/30 bg-gradient-to-br from-sky-400 to-emerald-400 shadow-[0_0_0_6px_rgba(15,23,42,0.9)] md:block" />
