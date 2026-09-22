@@ -40,6 +40,8 @@ const socials: SocialLink[] = [
   { label: "GitHub", href: "https://github.com/PhantomDave" },
 ];
 
+const resumeUrl = "/Davide_Rodo_CV.pdf";
+
 const services: Service[] = [
   {
     title: "Full-Stack Development",
@@ -75,39 +77,43 @@ const services: Service[] = [
 
 const experience: ExperienceEntry[] = [
   {
-    company: "BaxEnergy",
+    company: "Bax Energy",
+    role: "R&D Software Engineer",
+    period: "Apr 2024 – Present",
+    summary:
+      "Full stack engineering on an Asset Performance Management platform monitoring several GW of renewable energy assets across Europe and Asia, from Acireale (hybrid).",
+    highlights: [
+      "Develop full stack features in C# (.NET) and Next.js/React for the core monitoring platform",
+      "Design and implement REST and SOAP APIs powering client-facing analytics and third-party integrations",
+      "Provision and manage Azure and AWS infrastructure with Terraform, replacing manual setup with reproducible deployments",
+      "Containerize services with Docker and orchestrate them on Kubernetes to standardize releases across environments",
+      "Optimize services and database queries to improve platform responsiveness under production load",
+      "Work in cross-functional Agile teams of ~6 engineers, scaling to roughly 50 contributors at peak on the platform's largest delivery cycle",
+    ],
+  },
+  {
+    company: "Bax Energy",
     role: "Software Engineer",
-    period: "Jan 2025 – Present · 10 mos",
+    period: "Jan 2024 – Mar 2024",
     summary:
-      "Supporting BaxEnergy’s energy platform from Acireale (Hybrid), pairing with senior engineers to deliver .NET features and web enhancements.",
+      "Maintained and modernized legacy products in the Asset Performance Management suite for renewable energy operators.",
     highlights: [
-      "Prototype and ship .NET features across core web engineering initiatives",
-      "Shadow senior teammates to harden delivery pipelines and review production code",
-      "Assist with customer-facing demos and documentation for new energy modules",
+      "Maintained and extended legacy APM components serving renewable energy operators",
+      "Built Microsoft Teams and GitHub integrations that automated notification and alarm handling, removing manual triage from the team's daily workflow",
+      "Worked across Angular, Next.js and .NET Framework, integrating REST and SOAP services deployed on Azure and AWS",
     ],
   },
   {
-    company: "BaxEnergy",
-    role: "Software Developer",
-    period: "Jan 2024 – Dec 2024 · 1 yr",
+    company: "Voxel Entertainment ApS",
+    role: "Software Engineer / Team Lead",
+    period: "2019 – 2023",
     summary:
-      "Delivered C# and PHP solutions for BaxEnergy clients, balancing feature work with platform modernization efforts.",
+      "Remote technical lead for a multiplayer game platform, owning both the backend codebase and the Linux infrastructure behind it.",
     highlights: [
-      "Implemented .NET services and integrations that underpin energy analytics workloads",
-      "Maintained and refactored PHP components while trimming legacy technical debt",
-      "Coordinated with designers and PMs to launch monitoring dashboards to production",
-    ],
-  },
-  {
-    company: "Voxel Entertainment APS",
-    role: "Software Engineer · Part-time",
-    period: "Jan 2020 – Jun 2023 · 3 yrs 6 mos",
-    summary:
-      "Remote contributor ensuring the studio’s Linux infrastructure and backend tooling stayed resilient for the game teams.",
-    highlights: [
-      "Managed and maintained Linux virtual machines powering production services",
-      "Led and coordinated a distributed C# development team to deliver features on schedule",
-      "Built deployment tooling that reduced release incidents and improved observability",
+      "Led a development team of 4 engineers and managed a player community of approximately 1,000 users",
+      "Developed complex multiplayer gamemodes in C# and JavaScript, including backend services and REST APIs",
+      "Built websites and User Control Panels in PHP, both plain and on WordPress",
+      "Migrated the codebase from .NET Framework to .NET Core and administered the Linux cloud servers running the platform",
     ],
   },
 ];
@@ -167,7 +173,7 @@ const projects: Project[] = [
     <main
       class="mx-auto flex max-w-6xl flex-col gap-28 px-6 pb-32 pt-32 sm:px-8 lg:px-12"
     >
-      <HeroSection id="about" :socials="socials" />
+      <HeroSection id="about" :socials="socials" :resume-url="resumeUrl" />
       <ServicesSection :services="services" />
       <ExperienceSection id="experience" :experience="experience" />
       <!-- <EducationSection id="education" :education="education" /> -->
