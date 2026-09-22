@@ -41,6 +41,7 @@ jobs:
         with:
           path: ./dist
   deploy:
+    if: ${{ github.ref == 'refs/heads/main' }}
     permissions:
       pages: write
       id-token: write
@@ -51,6 +52,5 @@ jobs:
     needs: build
     steps:
       - name: Deploy to GitHub Pages
-        if: ${{ github.ref == 'refs/heads/main' }}
         id: deployment
         uses: actions/deploy-pages@v4
