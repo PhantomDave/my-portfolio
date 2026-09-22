@@ -30,7 +30,7 @@ defineProps<{ experience: ExperienceEntry[] }>()
           :key="`${item.company}-${item.role}`"
           class="relative border border-border bg-surface-100 p-6 shadow-panel md:ml-12 md:pl-16"
         >
-          <div class="absolute left-0 top-7 hidden h-3 w-3 -translate-x-1/2 border border-border-strong bg-accent shadow-[0_0_0_6px_#0d0d0b] md:block" />
+          <div class="absolute left-0 top-7 hidden h-3 w-3 -translate-x-1/2 border border-border-strong bg-accent shadow-[0_0_0_6px_var(--color-surface-100)] md:block" />
           <div class="flex flex-wrap items-center gap-3 text-sm text-ink-muted">
             <span class="rounded-xs bg-surface-accent-muted px-3 py-1 font-mono text-xs uppercase tracking-wider text-ink">
               {{ item.period }}

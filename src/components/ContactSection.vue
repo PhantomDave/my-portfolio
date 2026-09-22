@@ -2,7 +2,7 @@
   <section aria-labelledby="contact-heading" class="border border-border bg-surface-100 p-10 shadow-panel">
     <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
       <div class="max-w-xl space-y-4">
-        <p class="font-mono text-sm uppercase tracking-[0.25em] text-ink-muted">Next Steps</p>
+        <p class="font-mono text-xs uppercase tracking-[0.25em] text-ink-muted">Next Steps</p>
         <h2 id="contact-heading" class="text-3xl font-semibold text-ink sm:text-4xl">
           Let’s build the next thing your customers can’t live without.
         </h2>

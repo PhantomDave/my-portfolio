@@ -64,7 +64,7 @@ const closeMenu = () => {
         </a>
         <a
           href="#contact"
-          class="border border-border bg-surface-100 px-4 py-2 font-medium text-ink transition hover:border-border-strong"
+          class="bg-accent px-4 py-2 font-medium text-on-accent shadow-panel transition hover:-translate-y-0.5"
         >
           Let’s work together
         </a>
