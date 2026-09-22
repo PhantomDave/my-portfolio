@@ -12,12 +12,12 @@ defineProps<{ services: Service[] }>()
   <section aria-labelledby="services-heading" class="space-y-10">
     <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
       <div class="max-w-2xl space-y-3">
-        <p class="text-sm uppercase tracking-[0.25em] text-cyan-300/70">Capabilities</p>
-        <h2 id="services-heading" class="text-3xl font-semibold text-slate-50 sm:text-4xl">
+        <p class="font-mono text-xs uppercase tracking-[0.25em] text-ink-muted">Capabilities</p>
+        <h2 id="services-heading" class="text-3xl font-semibold text-ink sm:text-4xl">
           Partnering across product, design, and engineering to launch and scale experiences that matter.
         </h2>
       </div>
-      <p class="max-w-sm text-sm text-slate-400">
+      <p class="max-w-sm text-sm text-ink-muted">
         I slot into teams as an embedded lead or fractional partner—tight feedback loops, transparent metrics, and calm delivery.
       </p>
     </div>
@@ -26,19 +26,19 @@ defineProps<{ services: Service[] }>()
       <article
         v-for="service in services"
         :key="service.title"
-        class="flex h-full flex-col rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:border-cyan-400/60 hover:bg-cyan-400/10"
+        class="flex h-full flex-col border border-border bg-surface-100 p-8 shadow-panel transition hover:border-border-strong"
       >
         <div>
-          <h3 class="text-xl font-semibold text-slate-50">{{ service.title }}</h3>
-          <p class="mt-3 text-sm text-slate-400">{{ service.description }}</p>
+          <h3 class="text-xl font-semibold text-ink">{{ service.title }}</h3>
+          <p class="mt-3 text-sm text-ink-muted">{{ service.description }}</p>
         </div>
-        <ul class="mt-6 space-y-3 text-sm text-slate-300">
+        <ul class="mt-6 space-y-3 text-sm text-ink-muted">
           <li
             v-for="bullet in service.bullets"
             :key="bullet"
             class="flex items-start gap-3"
           >
-            <span class="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-gradient-to-r from-sky-400 to-emerald-400" />
+            <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 bg-accent" />
             <span>{{ bullet }}</span>
           </li>
         </ul>
