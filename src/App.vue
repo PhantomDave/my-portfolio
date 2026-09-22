@@ -40,8 +40,6 @@ const socials: SocialLink[] = [
   { label: "GitHub", href: "https://github.com/PhantomDave" },
 ];
 
-const resumeUrl = "/Davide_Rodo_CV.pdf";
-
 const services: Service[] = [
   {
     title: "Full-Stack Development",
@@ -173,7 +171,7 @@ const projects: Project[] = [
     <main
       class="mx-auto flex max-w-6xl flex-col gap-28 px-6 pb-32 pt-32 sm:px-8 lg:px-12"
     >
-      <HeroSection id="about" :socials="socials" :resume-url="resumeUrl" />
+      <HeroSection id="about" :socials="socials" />
       <ServicesSection :services="services" />
       <ExperienceSection id="experience" :experience="experience" />
       <!-- <EducationSection id="education" :education="education" /> -->

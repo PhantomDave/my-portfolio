@@ -4,7 +4,7 @@ type SocialLink = {
   href: string
 }
 
-defineProps<{ socials: SocialLink[]; resumeUrl: string }>()
+defineProps<{ socials: SocialLink[] }>()
 </script>
 
 <template>
@@ -35,7 +35,7 @@ defineProps<{ socials: SocialLink[]; resumeUrl: string }>()
           </svg>
         </a>
         <a
-          :href="resumeUrl"
+          href="/Davide_Rodo_CV.pdf"
           download
           class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-white/30 hover:bg-white/10"
         >
