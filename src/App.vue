@@ -151,7 +151,6 @@ const projects: Project[] = [
       "CI/CD",
       "Agile Methodologies",
     ],
-    accent: "from-sky-400 via-cyan-500 to-emerald-400",
   },
   {
     name: "Money Tracker",
@@ -160,13 +159,12 @@ const projects: Project[] = [
     stack: ["Python", "Angular", "REST APIs"],
     linkLabel: "View project",
     linkHref: "https://github.com/PhantomDave/wheremoney",
-    accent: "from-amber-400 via-orange-500 to-rose-400",
   },
 ];
 </script>
 
 <template>
-  <div id="top" class="min-h-screen bg-slate-950 text-slate-100">
+  <div id="top" class="min-h-screen bg-surface-000 text-ink">
     <SiteHeader :navigation="navigation" />
     <main
       class="mx-auto flex max-w-6xl flex-col gap-28 px-6 pb-32 pt-32 sm:px-8 lg:px-12"
