@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Davide Rodo — Software Engineer</title>
+<style>
+  @page { size: A4; margin: 11mm 12mm 10mm 12mm; }
+
+  :root {
+    --ink:      #14202e;
+    --muted:    #56687d;
+    --faint:    #8595a6;
+    --accent:   #0d7d7a;
+    --rule:     #dfe5ec;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0; padding: 0;
+    font-family: "Carlito", "DejaVu Sans", sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.34;
+    color: var(--ink);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ---------- header ---------- */
+  header { border-bottom: 2.5px solid var(--accent); padding-bottom: 7px; margin-bottom: 10px; }
+
+  .name {
+    font-family: "Poppins", "Carlito", sans-serif;
+    font-size: 23pt;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+    line-height: 1;
+    margin: 0;
+  }
+
+  .role {
+    font-family: "Poppins", "Carlito", sans-serif;
+    font-size: 11pt;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    margin: 6px 0 0;
+  }
+
+  .contacts {
+    margin-top: 9px;
+    font-size: 9.2pt;
+    color: var(--muted);
+  }
+  .contacts span { white-space: nowrap; }
+  .contacts .sep { color: var(--faint); padding: 0 6px; }
+  .contacts a { color: var(--muted); text-decoration: none; }
+
+  .summary { margin: 0 0 11px; font-size: 9.4pt; color: #2b3a4c; text-align: justify; }
+
+  /* ---------- layout ---------- */
+  .cols { display: flex; gap: 18px; align-items: flex-start; }
+  .main { flex: 1 1 auto; min-width: 0; }
+  .side { flex: 0 0 168px; }
+
+  h2.section {
+    font-family: "Poppins", "Carlito", sans-serif;
+    font-size: 8.6pt;
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 6px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .main h2.section + .job { margin-top: 0; }
+  .block + .block { margin-top: 12px; }
+
+  /* ---------- experience ---------- */
+  .company {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 10px;
+  }
+  .company-name { font-family: "Poppins", "Carlito", sans-serif; font-size: 10.6pt; font-weight: 600; }
+  .company-meta { font-size: 8.8pt; color: var(--faint); white-space: nowrap; }
+
+  .job { margin-top: 6px; padding-left: 10px; border-left: 2px solid var(--rule); }
+  .job + .job { margin-top: 9px; }
+  .job-title { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .job-role { font-weight: 700; font-size: 9.8pt; }
+  .job-dates { font-size: 8.8pt; color: var(--muted); white-space: nowrap; }
+
+  ul { margin: 5px 0 0; padding: 0; list-style: none; }
+  li { position: relative; padding-left: 11px; margin-bottom: 2.5px; text-align: justify; }
+  li::before {
+    content: ""; position: absolute; left: 1px; top: 5.6px;
+    width: 4px; height: 4px; border-radius: 50%; background: var(--accent); opacity: .65;
+  }
+
+  /* ---------- sidebar ---------- */
+  .side .block + .block { margin-top: 12px; }
+  .skill-group { margin-bottom: 6.5px; }
+  .skill-label {
+    font-size: 8.4pt; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .7px; color: var(--faint); margin-bottom: 2px;
+  }
+  .skill-list { font-size: 9pt; line-height: 1.33; }
+
+  .edu { margin-bottom: 8px; }
+  .edu-year { font-size: 8.4pt; font-weight: 700; color: var(--accent); letter-spacing: .6px; }
+  .edu-title { font-size: 9.6pt; font-weight: 700; line-height: 1.3; margin-top: 1px; }
+  .edu-place { font-size: 8.8pt; color: var(--muted); }
+
+  .lang { display: flex; justify-content: space-between; font-size: 9.4pt; margin-bottom: 2.5px; }
+  .lang b { font-weight: 600; }
+  .lang span { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1 class="name">Davide Rodo</h1>
+  <p class="role">Software Engineer</p>
+  <div class="contacts">
+    <span>Catania, Italy</span><span class="sep">|</span><span>+39 375 701 8317</span><span class="sep">|</span><span><a href="mailto:davide.rodo@pdave.dev">davide.rodo@pdave.dev</a></span><span class="sep">|</span><span><a href="https://pdave.dev">pdave.dev</a></span><span class="sep">|</span><span><a href="https://github.com/PhantomDave">github.com/PhantomDave</a></span><span class="sep">|</span><span><a href="https://www.linkedin.com/in/davide-rodo-23829419b/">linkedin.com/in/davide-rodo</a></span>
+  </div>
+</header>
+
+<p class="summary">
+  Full Stack Software Engineer specializing in .NET and Next.js/React, building monitoring platforms for the
+  renewable energy sector — currently on an Asset Performance Management system covering several GW of assets
+  across Europe and Asia. Experienced in cloud architecture on Azure and AWS, infrastructure automation with
+  Terraform, and containerized deployments with Docker and Kubernetes. Background in leading a small development
+  team and modernizing legacy codebases.
+</p>
+
+<div class="cols">
+  <div class="main">
+
+    <div class="block">
+      <h2 class="section">Experience</h2>
+
+      <div class="company">
+        <span class="company-name">Bax Energy</span>
+        <span class="company-meta">Acireale, Italy · Hybrid</span>
+      </div>
+
+      <div class="job">
+        <div class="job-title">
+          <span class="job-role">R&amp;D Software Engineer</span>
+          <span class="job-dates">Apr 2024 – Present</span>
+        </div>
+        <ul>
+          <li>Develop full stack features in C# (.NET) and Next.js/React for an Asset Performance Management platform monitoring several GW of renewable energy assets across multiple countries in Europe and Asia.</li>
+          <li>Design and implement REST and SOAP APIs powering client-facing analytics and third-party integrations.</li>
+          <li>Provision and manage Azure and AWS infrastructure with Terraform, replacing manual environment setup with reproducible, version-controlled deployments.</li>
+          <li>Containerize services with Docker and orchestrate them on Kubernetes, standardizing deployments across environments.</li>
+          <li>Optimize services and database queries to improve platform responsiveness under production load.</li>
+          <li>Work in cross-functional Agile teams of ~6 engineers, scaling to roughly 50 contributors at peak on the platform's largest delivery cycle.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-title">
+          <span class="job-role">Software Engineer</span>
+          <span class="job-dates">Jan 2024 – Mar 2024</span>
+        </div>
+        <ul>
+          <li>Maintained and extended legacy components of the Asset Performance Management suite for renewable energy operators.</li>
+          <li>Built integrations with Microsoft Teams and GitHub to automate notification and alarm handling, removing manual triage from the team's daily workflow.</li>
+          <li>Worked across Angular, Next.js and .NET Framework, integrating REST and SOAP services deployed on Azure and AWS.</li>
+        </ul>
+      </div>
+
+      <div class="company" style="margin-top:12px">
+        <span class="company-name">Voxel Entertainment ApS</span>
+        <span class="company-meta">Remote</span>
+      </div>
+
+      <div class="job">
+        <div class="job-title">
+          <span class="job-role">Software Engineer / Team Lead</span>
+          <span class="job-dates">2019 – 2023</span>
+        </div>
+        <ul>
+          <li>Led a development team of 4 engineers and managed a player community of approximately 1,000 users.</li>
+          <li>Developed complex multiplayer gamemodes in C# and JavaScript, including backend services and REST APIs.</li>
+          <li>Built websites and User Control Panels in PHP, both plain and on WordPress.</li>
+          <li>Migrated the codebase from .NET Framework to .NET Core and administered the Linux cloud servers running the platform.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block">
+      <h2 class="section">Selected Projects</h2>
+      <ul style="margin-top:0">
+        <li><b>South Valley Roleplay</b> — GTA V roleplay server gamemode engineered end to end in C#, covering backend systems, REST APIs, Docker deployment and CI/CD, while mentoring contributors.</li>
+        <li><b>Money Tracker</b> — personal finance tool with a Python backend and Angular frontend for tracking day-to-day expenses (github.com/PhantomDave/wheremoney).</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <aside class="side">
+
+    <div class="block">
+      <h2 class="section">Expertise</h2>
+
+      <div class="skill-group">
+        <div class="skill-label">Languages</div>
+        <div class="skill-list">C#, TypeScript / JavaScript, SQL, PHP, Python, Java, C / C++</div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">Frameworks</div>
+        <div class="skill-list">.NET / .NET Core / .NET Framework, Next.js, React, Vue, Angular</div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">Cloud &amp; DevOps</div>
+        <div class="skill-list">Azure, AWS, Terraform, Docker, Kubernetes, Git, CI/CD</div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">Practices</div>
+        <div class="skill-list">REST &amp; SOAP API design, Agile / Scrum, legacy modernization, code review &amp; mentoring</div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">Systems</div>
+        <div class="skill-list">Linux, Windows</div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h2 class="section">Education</h2>
+      <div class="edu">
+        <div class="edu-year">2023</div>
+        <div class="edu-title">Full Stack Developer Course</div>
+        <div class="edu-place">Free Mind Foundry — Acireale</div>
+      </div>
+      <div class="edu">
+        <div class="edu-year">2017</div>
+        <div class="edu-title">High School Diploma</div>
+        <div class="edu-place">IPSSEOA “Karol Wojtyła” — Catania</div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h2 class="section">Languages</h2>
+      <div class="lang"><b>Italian</b><span>Native</span></div>
+      <div class="lang"><b>English</b><span>C1</span></div>
+    </div>
+
+  </aside>
+</div>
+
+</body>
+</html>

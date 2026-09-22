@@ -20,7 +20,7 @@ defineProps<{ socials: SocialLink[] }>()
           I build full-stack solutions that scale—from robust backends to polished interfaces.
         </h1>
         <p class="text-pretty text-lg text-slate-300 sm:text-xl">
-          I'm Davide, a full-stack engineer specializing in C#, .NET, and modern web frameworks. I build resilient systems and mentor teams to deliver quality software with confidence.
+          I'm Davide, a full-stack engineer specializing in C#/.NET and Next.js/React. I build monitoring platforms for the renewable energy sector, automate the cloud infrastructure behind them, and have led a small team through a legacy-to-modern migration.
          </p>
       </div>
 
@@ -35,25 +35,35 @@ defineProps<{ socials: SocialLink[] }>()
           </svg>
         </a>
         <a
-          href="mailto:hello@pdave.dev"
+          href="/Davide_Rodo_CV.pdf"
+          download
           class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-white/30 hover:bg-white/10"
         >
-          Request a proposal
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="h-4 w-4">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M12 4v11m0 0 4-4m-4 4-4-4M5 19h14" />
+          </svg>
+          Download CV
+        </a>
+        <a
+          href="mailto:davide.rodo@pdave.dev"
+          class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-white/30 hover:bg-white/10"
+        >
+          Get in touch
         </a>
       </div>
 
       <ul class="grid gap-6 sm:grid-cols-3">
         <li class="rounded-2xl border border-white/10 bg-white/5 px-5 py-6">
-          <p class="text-3xl font-semibold text-slate-50">5+</p>
-          <p class="mt-1 text-sm text-slate-400">Years of professional development experience</p>
+          <p class="text-3xl font-semibold text-slate-50">6+</p>
+          <p class="mt-1 text-sm text-slate-400">Years building and shipping software</p>
         </li>
         <li class="rounded-2xl border border-white/10 bg-white/5 px-5 py-6">
           <p class="text-3xl font-semibold text-slate-50">Full-Stack</p>
           <p class="mt-1 text-sm text-slate-400">C#, .NET, PHP, Python & Modern Frontend</p>
         </li>
         <li class="rounded-2xl border border-white/10 bg-white/5 px-5 py-6">
-          <p class="text-3xl font-semibold text-slate-50">Remote</p>
-          <p class="mt-1 text-sm text-slate-400">Proven track record in distributed teams</p>
+          <p class="text-3xl font-semibold text-slate-50">GW-scale</p>
+          <p class="mt-1 text-sm text-slate-400">Renewable assets monitored across Europe &amp; Asia</p>
         </li>
       </ul>
 

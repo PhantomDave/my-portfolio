@@ -41,7 +41,7 @@ onUnmounted(() => {
           Davide Rodo
           <span class="absolute -bottom-1 left-0 h-[2px] w-full scale-x-0 bg-gradient-to-r from-sky-400 to-emerald-400 transition-transform duration-300 group-hover:scale-x-100" />
         </span>
-        <span class="hidden rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300 sm:inline-flex">Portfolio 2025</span>
+        <span class="hidden rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300 sm:inline-flex">Portfolio 2026</span>
       </a>
 
       <button
@@ -70,6 +70,13 @@ onUnmounted(() => {
           {{ item.label }}
         </a>
         <a
+          href="/Davide_Rodo_CV.pdf"
+          download
+          class="text-slate-300 transition hover:text-white"
+        >
+          CV
+        </a>
+        <a
           href="#contact"
           class="rounded-full border border-cyan-500/60 bg-cyan-500/10 px-4 py-2 font-medium text-cyan-200 transition hover:-translate-y-0.5 hover:border-cyan-400 hover:bg-cyan-400/20 hover:text-white"
         >
@@ -90,6 +97,14 @@ onUnmounted(() => {
               @click="closeMenu"
             >
               {{ item.label }}
+            </a>
+            <a
+              href="/Davide_Rodo_CV.pdf"
+              download
+              class="px-5 py-4 text-sm text-slate-200 transition hover:bg-white/5"
+              @click="closeMenu"
+            >
+              Download CV
             </a>
             <a
               href="#contact"
