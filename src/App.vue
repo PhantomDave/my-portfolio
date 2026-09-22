@@ -153,12 +153,44 @@ const projects: Project[] = [
     ],
   },
   {
-    name: "Money Tracker",
+    name: "Gym Manager",
     description:
-      "Lightweight finance companion built with a Python backend and Angular UI to keep daily expenses in check while traveling.",
-    stack: ["Python", "Angular", "REST APIs"],
+      "Desktop app for a small gym's front desk: memberships, health certificate expiry, and document storage. Built with Tauri 2 and Rust to run on 2GB of RAM, with zero network calls.",
+    stack: ["Rust", "Tauri", "TypeScript", "Preact", "SQLite"],
     linkLabel: "View project",
-    linkHref: "https://github.com/PhantomDave/wheremoney",
+    linkHref: "https://github.com/PhantomDave/gym-manager",
+  },
+  {
+    name: "Conductor",
+    description:
+      "Open-source universal task runner and real-time dashboard: starts a full dev stack from one declarative YAML file, with dependency-aware health checks and a desktop app.",
+    stack: ["TypeScript", "Bun", "React", "Fastify", "SQLite", "Tauri"],
+    linkLabel: "View project",
+    linkHref: "https://github.com/PhantomDave/conductor",
+  },
+  {
+    name: "Bank Tracker",
+    description:
+      "Full-stack personal finance tracker with a GraphQL API, configurable dashboards and widgets, CSV import, and Dockerized deployment behind Nginx.",
+    stack: ["C#", ".NET", "GraphQL", "Angular", "PostgreSQL", "Docker"],
+    linkLabel: "View project",
+    linkHref: "https://github.com/PhantomDave/BankTrackerGraphQL",
+  },
+  {
+    name: "Proxmox Discord Connector",
+    description:
+      "Discord bot exposing Proxmox VE controls as slash commands, packaged and published to PyPI with a Docker image on GHCR.",
+    stack: ["Python", "Discord API", "Proxmox", "Docker", "CI/CD"],
+    linkLabel: "View project",
+    linkHref: "https://github.com/PhantomDave/proxmox-discord-connector",
+  },
+  {
+    name: "Git Town VS Code Extension",
+    description:
+      "VS Code extension wrapping Git Town's branching workflow (sync, hack, ship, propose) in a sidebar UI and command palette, published on the VS Code Marketplace.",
+    stack: ["TypeScript", "VS Code API", "esbuild", "CI/CD"],
+    linkLabel: "View project",
+    linkHref: "https://github.com/PhantomDave/git-town-vscode-extension",
   },
 ];
 </script>
