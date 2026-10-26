@@ -22,7 +22,7 @@ defineProps<{ services: Service[] }>()
       </p>
     </div>
 
-    <div class="grid gap-6 md:grid-cols-3">
+    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
       <article
         v-for="service in services"
         :key="service.title"

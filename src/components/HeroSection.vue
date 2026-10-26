@@ -20,7 +20,7 @@ defineProps<{ socials: SocialLink[] }>()
           I build full-stack solutions that scale—from robust backends to polished interfaces.
         </h1>
         <p class="text-pretty text-lg text-ink-muted sm:text-xl">
-          I'm Davide, a full-stack engineer specializing in C#/.NET and Next.js/React. I build monitoring platforms for the renewable energy sector, automate the cloud infrastructure behind them, and have led a small team through a legacy-to-modern migration.
+          I'm Davide, a full-stack engineer specializing in C#/.NET and Next.js/React. I build monitoring platforms for the renewable energy sector, automate the cloud infrastructure behind them, have led a small team through a legacy-to-modern migration, and work daily with AI agents and local LLMs.
          </p>
       </div>
 
@@ -88,7 +88,7 @@ defineProps<{ socials: SocialLink[] }>()
         <div class="border border-border bg-surface-200 px-8 pb-10 pt-10 text-center">
           <div class="mx-auto mb-6 h-28 w-28 border border-border-strong bg-accent" />
           <h2 class="text-lg font-semibold text-ink">Davide Rodo</h2>
-          <p class="mt-2 text-sm text-ink-muted">Full-Stack Engineer</p>
+          <p class="mt-2 text-sm text-ink-muted">Full-Stack &amp; AI Engineer</p>
           <div class="mt-6 space-y-3 text-left text-xs text-ink-muted">
             <div class="flex items-center gap-3">
               <span class="h-1.5 w-1.5 flex-shrink-0 bg-accent" />
@@ -101,6 +101,10 @@ defineProps<{ socials: SocialLink[] }>()
             <div class="flex items-center gap-3">
               <span class="h-1.5 w-1.5 flex-shrink-0 bg-accent" />
               Team collaboration & mentoring
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="h-1.5 w-1.5 flex-shrink-0 bg-accent" />
+              AI-assisted engineering & local LLMs
             </div>
           </div>
         </div>
