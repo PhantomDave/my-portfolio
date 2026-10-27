@@ -1,45 +1,70 @@
 @import "tailwindcss";
 
+/* Same palette as the printable CV in cv/cv.html, so the site and the PDF read as one document. */
 @theme {
-  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+  --font-sans: "Archivo", ui-sans-serif, system-ui, -apple-system, sans-serif;
 
-  --color-surface-000: #0d0d0b;
-  --color-surface-100: #1a1a14;
-  --color-surface-200: #242419;
-  --color-ink: #f4f1e6;
-  --color-ink-muted: #a19d8e;
-  --color-ink-faint: #86816c;
-  --color-border: #232219;
-  --color-border-strong: #757462;
-  --color-accent: #f2a93a;
-  --color-on-accent: #14130d;
-  --color-signal-good: #6cc78a;
-  --color-surface-accent-muted: #2a2213;
-
-  --radius-xs: 2px;
-
-  --shadow-panel: 2px 2px 0 0 var(--color-border-strong);
+  --color-desk: #e6ebf0;
+  --color-sheet: #ffffff;
+  --color-ink: #14202e;
+  --color-ink-muted: #56687d;
+  --color-rule: #dfe5ec;
+  --color-accent: #0d7d7a;
 }
 
 @layer base {
   :root {
-    color-scheme: dark;
+    color-scheme: light dark;
   }
 
-  html {
-    scroll-behavior: smooth;
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-desk: #0c1116;
+      --color-sheet: #151c23;
+      --color-ink: #e3e9ef;
+      --color-ink-muted: #9aa9b8;
+      --color-rule: #27323d;
+      --color-accent: #4fc2bd;
+    }
   }
 
   body {
-    background-color: var(--color-surface-000);
+    background-color: var(--color-desk);
     color: var(--color-ink);
+    font-size: 1rem;
+    line-height: 1.55;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
+  a {
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1px;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
   ::selection {
     background-color: var(--color-accent);
-    color: var(--color-on-accent);
+    color: var(--color-sheet);
+  }
+
+  @media print {
+    :root {
+      color-scheme: light;
+      --color-desk: #ffffff;
+      --color-sheet: #ffffff;
+      --color-ink: #14202e;
+      --color-ink-muted: #56687d;
+      --color-rule: #dfe5ec;
+      --color-accent: #0d7d7a;
+    }
+
+    body {
+      font-size: 9.5pt;
+    }
   }
 }
