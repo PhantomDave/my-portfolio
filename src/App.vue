@@ -78,7 +78,7 @@ const services: Service[] = [
     bullets: [
       "AI-assisted development and agentic coding workflows",
       "Prompt and context engineering for LLM tools",
-      "Running and integrating local LLMs",
+      "Local LLMs with Ollama and LM Studio, wired into OpenCode",
     ],
   },
 ];
