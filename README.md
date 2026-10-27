@@ -1,6 +1,6 @@
 # Davide Rodo — Portfolio
 
-Personal site built with [Vue 3](https://vuejs.org/), [TypeScript](https://www.typescriptlang.org/), [Vite](https://vite.dev/), and the experimental [Tailwind CSS v4](https://tailwindcss.com/blog/tailwindcss-v4-alpha). It mirrors the structure of boutique studio portfolios, focusing on crisp storytelling, services, and measurable impact.
+Personal site built with [Vue 3](https://vuejs.org/), [TypeScript](https://www.typescriptlang.org/), [Vite](https://vite.dev/), and the experimental [Tailwind CSS v4](https://tailwindcss.com/blog/tailwindcss-v4-alpha). The site is laid out as a single-page CV and shares its palette with the printable CV in `cv/`.
 
 ## Local development
 
@@ -17,15 +17,13 @@ npm run build
 
 ## Architecture
 
-- `src/style.css` — global theme (fonts, background gradients, utility helpers)
-- `src/App.vue` — data-driven layout wiring the page sections
-- `src/components` — modular sections for hero, services, experience, projects, and contact CTA
+- `src/style.css` — theme tokens (light, dark and print)
+- `src/App.vue` — CV content (experience, projects, skills, education) and the sheet layout
+- `src/components` — header, experience, projects, expertise and education sections
 
 ## Customisation
 
-- Update navigation labels, social links, and project data inside `src/App.vue`
-- Replace placeholder imagery in `HeroSection.vue` and project cards with real assets or media embeds
-- Point CTA links to your actual resume, calendar, and live case studies
+- Update content inside `src/App.vue`, and keep `cv/cv.html` in sync when it changes
 
 ## License
 
