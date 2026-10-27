@@ -71,6 +71,16 @@ const services: Service[] = [
       "Junior developer mentorship and onboarding",
     ],
   },
+  {
+    title: "AI Engineering",
+    description:
+      "For the past year I've built software alongside AI agents like Claude Code and GitHub Copilot, and experimented with running language models locally.",
+    bullets: [
+      "AI-assisted development and agentic coding workflows",
+      "Prompt and context engineering for LLM tools",
+      "Local LLMs with Ollama and LM Studio, wired into OpenCode",
+    ],
+  },
 ];
 
 const experience: ExperienceEntry[] = [
